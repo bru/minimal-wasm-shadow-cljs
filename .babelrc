@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["@babel/preset-env",
+     { "targets": {
+       "chrome": "58"
+     }}]
+  ],
+    "plugins": [
+      "@babel/plugin-transform-flow-strip-types"]
+}

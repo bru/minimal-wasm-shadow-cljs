@@ -1,0 +1,20 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "resources/wasm"
+  "resources/gen"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[reagent "1.0.0-alpha1"]]
+
+ :nrepl {:port 8229}
+ :dev-http {8844 "public"}
+ :builds
+ {:app
+  {:target :browser
+   :modules {:app {:entries [core]}}
+   :js-options {:js-provider :shadow}
+   :output-dir "public/assets/app/js"
+   :asset-path "/assets/app/js"}}}

@@ -9,8 +9,7 @@ Minimal project to demonstrate the usage of a WASM module in Shadow-cljs.
 
 ## Development build
 
-- js: `npx babel src/js --out-dir resources/gen --source-maps inline --watch`
-- cljs: `npx shadow-cljs watch app`
+`./build.sh`
 
 the default website is at http://localhost:8844
 

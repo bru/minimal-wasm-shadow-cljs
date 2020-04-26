@@ -1,9 +1,8 @@
 ;; shadow-cljs configuration
 {:source-paths
  ["src/dev"
-  "resources/wasm"
-  "resources/gen"
   "src/main"
+  "src/gen"
   "src/test"]
 
  :dependencies
@@ -14,7 +13,7 @@
  :builds
  {:app
   {:target :browser
-   :modules {:app {:entries [core]}}
+   :modules {:app {:init-fn wasm-test.core/init}}
    :js-options {:js-provider :shadow}
    :output-dir "public/assets/app/js"
    :asset-path "/assets/app/js"}}}

@@ -1,4 +1,4 @@
-import WasmAdder from '/libadd.js';
+const WasmAdder = require('./libadd.js');
 
 let add, malloc, free;
 
@@ -11,6 +11,6 @@ const wait = new Promise(done => {
   });
 });
 
-export function add2wasm(x, y) {
+exports.add2wasm = function add2wasm(x, y) {
   return wait.then(() => { return add(x, y); });
 }

@@ -1,6 +1,6 @@
 import WasmAdder from '/libadd.js';
 
-let add, malloc, free;
+let add;
 
 const wait = new Promise(done => {
   WasmAdder().then(Module => {

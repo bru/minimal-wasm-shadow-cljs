@@ -1,17 +1,19 @@
-## Shadow-cljs WASM example
+# Shadow-cljs WASM example
 
 Minimal project to demonstrate the usage of a WASM module in Shadow-cljs.
 
-### Environment setup
-- `npm install`
+## Environment setup
 
-### To Build
+`npm install`
+
+## Development build
+
 - js: `npx babel src/js --out-dir resources/gen --source-maps inline --watch`
 - cljs: `npx shadow-cljs watch app`
 
 the default website is at http://localhost:8844
 
-### WASM build
+## WASM build
 
 The C source file is at `src/c/add2.c`; it contains just one function:
 

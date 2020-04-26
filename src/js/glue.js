@@ -4,8 +4,6 @@ let add, malloc, free;
 
 const wait = new Promise(done => {
   WasmAdder().then(Module => {
-    malloc = Module._malloc;
-    free = Module._free;
     add = Module.cwrap('add2', 'number', ['number', 'number']);
     done();
   });

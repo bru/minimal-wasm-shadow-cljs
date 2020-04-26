@@ -27,4 +27,4 @@ To compile it to wasm, assuming you have the `emsdk` environment setup correctly
 
 `EMCC_ONLY_FORCED_STDLIBS=1 emcc -O3 -Os -s EXTRA_EXPORTED_RUNTIME_METHODS="['cwrap']" -s INVOKE_RUN=0 -s EXPORT_ALL=1 -s MODULARIZE=1 -s FILESYSTEM=0 -s WASM=1 -s LINKABLE=1 -s ERROR_ON_UNDEFINED_SYMBOLS=0 -o libadd.js add2.c`
 
-Then `libadd.wasm` goes into `resources/public/sasets/app/js` while `libadd.js` goes into `resources/wasm`
+Then `libadd.wasm` goes into `public/assets/app/js` while `libadd.js` goes into `src/gen/wasm_test`

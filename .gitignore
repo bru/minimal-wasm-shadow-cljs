@@ -3,8 +3,7 @@ public/assets
 
 /target
 /checkouts
-/src/gen
-/resources/gen
+
 
 pom.xml
 pom.xml.asc

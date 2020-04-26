@@ -2,16 +2,35 @@
 
 Minimal project to demonstrate the usage of a WASM module in Shadow-cljs.
 
-## Environment setup
+## Environment setup
 
 `npm install`
 
-## Development build
+
+## Development build
 
 - js: `npx babel src/js --out-dir resources/gen --source-maps inline --watch`
 - cljs: `npx shadow-cljs watch app`
 
 the default website is at http://localhost:8844
+
+### WARNING: recent shadow-cljs 
+
+Please note that recent versions of `shadow-cljs` (> 2.8.101) break this setup, reporting the following error during compilation:
+```
+The required JS dependency "fs" is not available, it was required by "libadd.js".
+
+Dependency Trace:
+	core.cljs
+	glue.js
+	libadd.js
+
+Searched for npm packages in:
+	/Users/bru/Code/bear/research/wasm-shadow/node_modules
+
+See: https://shadow-cljs.github.io/docs/UsersGuide.html#npm-install
+```
+
 
 ## WASM build
 
